@@ -1,0 +1,23 @@
+﻿@model Blog.Dominio.Publicacao
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+@using (Html.BeginForm("Cadastrar", "Posts", FormMethod.Post, new { @class = "cadastro-post" }))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Cadastrar Post <a href="/Posts/" class="fr" title="Voltar"><i class="icon-arrow-left"></i>&nbsp;&nbsp;&nbsp;</a></legend>
+        @if (TempData["Mensagem"] != null)
+        {
+            <div class="alert alert-success">
+                <b>@TempData["Mensagem"]</b>
+                <button type="button" class="close" data-dismiss="alert">×</button>
+            </div>    
+        }
+        @Html.TextBoxFor(x => x.Titulo, new { @placeholder = "Título", @class = "w900" })
+        @Html.TextAreaFor(x => x.Conteudo, new { @placeholder = "Conteúdo", @class = "h400 w900" })
+        <input type="submit" name="btnCadastrar" value="Cadastrar" class="btn" />
+    </fieldset>
+}

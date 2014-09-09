@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="763F7444-543A-4D20-ACCB-B3E4041FBC8D" ModuleId="Blog.Dominio" />
+  <Module PersistentId="21B9194D-FA31-4545-97A0-7678B3EC3B73" ModuleId="Blog.Infra" />
+  <Module PersistentId="F17853F2-296E-40AB-AB11-1D2683FA0ADB" ModuleId="Blog.Web" />
+</Modules>
